@@ -6,7 +6,7 @@ package body Energy_Monitoring is
    procedure Start_Energy_Monitoring is
    begin
       Put_Line("Checking energy production...");
-      Energy_Production := 0.0;
+      Energy_Production := 1000.0;
       Put_Line("No Energy has been produced.");
       Put_Line("---");
    end Start_Energy_Monitoring;
