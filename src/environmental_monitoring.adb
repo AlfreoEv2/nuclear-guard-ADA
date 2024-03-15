@@ -30,9 +30,9 @@ package body Environmental_Monitoring is
       New_Gas_Level   : Float
    ) is
    begin
-      Temperature := New_Temperature;
-      Humidity    := New_Humidity;
-      Gas_Level   := New_Gas_Level;
+      Temperature := Temperature + New_Temperature;
+      Humidity    := Humidity + New_Humidity;
+      Gas_Level   := Gas_Level + New_Gas_Level;
       Check_Hazards;
    end Update_Sensor_Data;
 
