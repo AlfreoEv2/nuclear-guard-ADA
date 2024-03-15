@@ -28,4 +28,15 @@ package body Guard_Controller is
       Energy_Monitoring.Update_Energy_Production(New_Energy_Production);
    end Update_Guard;
 
+    procedure Control_Moderator (Insert_Or_Remove : Character) is
+   begin
+      if Insert_Or_Remove = 'I' or Insert_Or_Remove = 'i' then
+         Control_Rod_Interface.Insert_Control_Rods;
+      elsif Insert_Or_Remove = 'R' or Insert_Or_Remove = 'r' then
+         Control_Rod_Interface.Remove_Control_Rods;
+      else
+         Put_Line("Invalid input. Please enter 'I' to insert or 'R' to remove control rods.");
+      end if;
+   end Control_Moderator;
+
 end Guard_Controller;

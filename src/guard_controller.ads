@@ -1,6 +1,7 @@
 with Fuel_Management;
 with Environmental_Monitoring;
 with Energy_Monitoring;
+with Control_Rod_Interface;
 
 package Guard_Controller is
 
@@ -15,6 +16,9 @@ package Guard_Controller is
       New_Gas_Level    : Float;
       New_Energy_Production : Float
    );
+
+   -- Procedure to control the moderator (control rods)
+   procedure Control_Moderator (Insert_Or_Remove : Character);
 
 private
 end Guard_Controller;
