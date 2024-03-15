@@ -1,0 +1,6 @@
+project nuclear_guard_app is
+   for Source_Dirs use ("src");
+   for Object_Dir use "build";
+   for Languages use ("Ada");
+   for Main use ("main.adb");
+end nuclear_guard_app;
