@@ -13,7 +13,7 @@ package body Energy_Monitoring is
 
    procedure Update_Energy_Production (New_Value : Float) is
    begin
-      Energy_Production := New_Value;
+      Energy_Production := Energy_Production + New_Value;
       Check_Energy_Production;
    end Update_Energy_Production;
 
