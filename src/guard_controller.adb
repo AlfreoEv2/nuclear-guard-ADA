@@ -7,6 +7,7 @@ package body Guard_Controller is
       Put_Line("Starting Nuclear Guard App...");
       Fuel_Management.Check_And_Refuel;
       Environmental_Monitoring.Check_Hazards;
+      Energy_Monitoring.Check_Energy_Production;
       Put_Line("Nuclear Guard App started successfully.");
    end Start_Guard;
 
@@ -14,7 +15,8 @@ package body Guard_Controller is
       Fuel_Consumption : Integer;
       New_Temperature  : Float;
       New_Humidity     : Float;
-      New_Gas_Level    : Float
+      New_Gas_Level    : Float;
+      New_Energy_Production : Float
    ) is
    begin
       Fuel_Management.Consume_Fuel(Fuel_Consumption);
@@ -23,6 +25,7 @@ package body Guard_Controller is
          New_Humidity,
          New_Gas_Level
       );
+      Energy_Monitoring.Update_Energy_Production(New_Energy_Production);
    end Update_Guard;
 
 end Guard_Controller;

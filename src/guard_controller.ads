@@ -1,5 +1,6 @@
 with Fuel_Management;
 with Environmental_Monitoring;
+with Energy_Monitoring;
 
 package Guard_Controller is
 
@@ -11,7 +12,8 @@ package Guard_Controller is
       Fuel_Consumption : Integer;
       New_Temperature  : Float;
       New_Humidity     : Float;
-      New_Gas_Level    : Float
+      New_Gas_Level    : Float;
+      New_Energy_Production : Float
    );
 
 private

@@ -5,7 +5,7 @@ procedure Main is
 begin
    Start_Guard;
 
-   Update_Guard(30, 25.0, 50.0, 0.1);
-   Update_Guard(80, 45.0, 90.0, 1.5);
+   Update_Guard(30, 25.0, 50.0, 0.1, 1000.0);
+   Update_Guard(50, 45.0, 90.0, 1.5, 400.0);
 
 end Main;
