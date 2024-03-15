@@ -6,7 +6,6 @@ package body Environmental_Monitoring is
    procedure Check_Hazards is
    Hazard : Boolean := False;
    begin
-      Put_Line("Checking for environmental hazards...");
       if Temperature > Max_Temperature or Temperature < Min_Temperature then
          Put_Line("Temperature hazard detected!");
          Hazard := True;

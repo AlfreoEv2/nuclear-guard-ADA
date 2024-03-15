@@ -4,11 +4,25 @@ package body Guard_Controller is
 
    procedure Start_Guard is
    begin
+      New_Line;
       Put_Line("Starting Nuclear Guard App...");
+      Put_Line("=======================================");
+      New_line;
+      Put_Line("Checking fuel levels...");
+      Put_Line("---");
       Fuel_Management.Check_And_Refuel;
+      Put_Line("---");
+      Put_Line("Checking for environmental hazards...");
+      Put_Line("---");
       Environmental_Monitoring.Check_Hazards;
+      Put_Line("---");
+      Put_Line("Checking energy production...");
+      Put_Line("---");
       Energy_Monitoring.Check_Energy_Production;
+      New_Line;
+      Put_Line("=======================================");
       Put_Line("Nuclear Guard App started successfully.");
+      New_Line;
    end Start_Guard;
 
    procedure Update_Guard (
