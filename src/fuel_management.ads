@@ -6,6 +6,7 @@ package Fuel_Management is
    Max_Fuel_Level : constant Integer := 100;
    Min_Refuel_Level : constant Integer := 30;
 
+   procedure Start_Fuel;
    procedure Check_And_Refuel;
 
    procedure Consume_Fuel (Amount : Integer);

@@ -3,6 +3,14 @@ with Ada.Float_Text_IO;
 
 package body Energy_Monitoring is
 
+   procedure Start_Energy_Monitoring is
+   begin
+      Put_Line("Checking energy production...");
+      Energy_Production := 0.0;
+      Put_Line("No Energy has been produced.");
+      Put_Line("---");
+   end Start_Energy_Monitoring;
+   
    procedure Check_Energy_Production is
    begin
       if Energy_Production < Min_Energy_Threshold then

@@ -4,6 +4,14 @@ with Ada.Float_Text_IO;
 
 package body Environmental_Monitoring is
 
+   procedure Start_Environment_Monitoring is
+   begin
+      Put_Line("Checking for environmental hazards...");
+      -- Use sensors to get data
+      Update_Sensor_Data(0.0, 0.0, 0.0);
+      Put_Line("---");
+   end Start_Environment_Monitoring;
+
    procedure Check_Hazards is
    Hazard : Boolean := False;
    begin

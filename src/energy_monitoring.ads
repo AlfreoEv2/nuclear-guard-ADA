@@ -4,6 +4,7 @@ package Energy_Monitoring is
    Energy_Production : Float := 1000.0;  -- Megawatts
    Min_Energy_Threshold : constant Float := 500.0;  -- Megawatts
 
+   procedure Start_Energy_Monitoring;
    procedure Check_Energy_Production;
    procedure Update_Energy_Production (New_Value : Float);
 

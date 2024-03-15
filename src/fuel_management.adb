@@ -2,6 +2,14 @@
 with Ada.Text_IO; use Ada.Text_IO;
 package body Fuel_Management is
 
+   procedure Start_Fuel is
+   begin
+      Put_Line("Checking Fuel Level...");
+      Fuel_Level := Max_Fuel_Level;
+      Put_Line("Fuel Level at 100%");
+      Put_Line("---");
+   end Start_Fuel;
+
    procedure Check_And_Refuel is
    begin
       if Fuel_Level <= Min_Refuel_Level then

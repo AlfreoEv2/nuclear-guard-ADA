@@ -12,6 +12,7 @@ package Environmental_Monitoring is
    Min_Humidity       : constant Float := 20.0;
    Max_Gas_Level      : constant Float := 1.0;
 
+   procedure Start_Environment_Monitoring;
    procedure Check_Hazards;
    procedure Update_Sensor_Data (
       New_Temperature : Float;
