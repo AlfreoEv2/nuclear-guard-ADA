@@ -1,19 +1,11 @@
 with Ada.Text_IO; use Ada.Text_IO;
-with Fuel_Management; use Fuel_Management;
-with Environmental_Monitoring; use Environmental_Monitoring;
+with Guard_Controller; use Guard_Controller;
 
 procedure Main is
 begin
-   Put_Line("Hello, Welcome to the Nuclear Guard App!");
+   Start_Guard;
 
-   -- Check and refuel if necessary
-   Check_And_Refuel;
-   Check_Hazards;
-
-   -- Consume some fuel
-   Consume_Fuel(30);
-   Consume_Fuel(50);
-
-   Update_Sensor_Data(45.0, 90.0, 1.5);
+   Update_Guard(30, 25.0, 50.0, 0.1);
+   Update_Guard(80, 45.0, 90.0, 1.5);
 
 end Main;
