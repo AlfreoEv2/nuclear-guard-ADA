@@ -33,17 +33,20 @@ package body Guard_Controller is
       New_Energy_Production : Float
    ) is
    begin
+      New_Line;
       Fuel_Management.Consume_Fuel(Fuel_Consumption);
+      Energy_Monitoring.Update_Energy_Production(New_Energy_Production);
       Environmental_Monitoring.Update_Sensor_Data(
          New_Temperature,
          New_Humidity,
          New_Gas_Level
       );
-      Energy_Monitoring.Update_Energy_Production(New_Energy_Production);
+      New_Line;
    end Update_Guard;
 
     procedure Control_Moderator (Insert_Or_Remove : Character) is
    begin
+      New_Line;
       if Insert_Or_Remove = 'I' or Insert_Or_Remove = 'i' then
          Control_Rod_Interface.Insert_Control_Rods;
       elsif Insert_Or_Remove = 'R' or Insert_Or_Remove = 'r' then
@@ -51,6 +54,7 @@ package body Guard_Controller is
       else
          Put_Line("Invalid input. Please enter 'I' to insert or 'R' to remove control rods.");
       end if;
+      New_Line;
    end Control_Moderator;
 
 end Guard_Controller;

@@ -1,5 +1,6 @@
 -- environmental_monitoring.adb
 with Ada.Text_IO; use Ada.Text_IO;
+with Ada.Float_Text_IO;
 
 package body Environmental_Monitoring is
 
@@ -29,9 +30,21 @@ package body Environmental_Monitoring is
       New_Gas_Level   : Float
    ) is
    begin
+      -- Temperature
       Temperature := Temperature + New_Temperature;
-      Humidity    := Humidity + New_Humidity;
-      Gas_Level   := Gas_Level + New_Gas_Level;
+      Put ("Temperature: ");
+      Ada.Float_Text_IO.Put(Item => Temperature, Fore => 0, Aft => 2, Exp => 0);
+      Put_Line(" C");
+      -- Humidity
+      Humidity := Humidity + New_Humidity;
+      Put("Humidity: ");
+      Ada.Float_Text_IO.Put(Item => Humidity, Fore => 0, Aft => 2, Exp => 0); 
+      Put_Line(" %");
+      -- Gas Level
+      Gas_Level := Gas_Level + New_Gas_Level;
+      Put("Gas Level: ");
+      Ada.Float_Text_IO.Put(Item => Gas_Level, Fore => 0, Aft => 2, Exp => 0);
+      Put_Line(" ppm");
       Check_Hazards;
    end Update_Sensor_Data;
 
